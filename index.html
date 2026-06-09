@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#141414" />
+  <title>Cellar·K — Wine Catalogue</title>
+  <meta name="description" content="Cellar·K — digital wine catalogue. Cantine Colosi, Salina & Sicily." />
+  <link rel="icon" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Playfair Display has UPRIGHT Greek (EB Garamond's Greek lowercase is slanted/
+       cursive, which looked off); one font, consistent in EN and EL. -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=7" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-top">
+      <a class="brand" href="#">
+        <img class="brand-mark" src="assets/logo-mark.png" alt="Cellar·K" />
+        <span class="brand-word">Cellar·K</span>
+      </a>
+      <div class="hero-top-right">
+        <button class="lang" id="lang" type="button" aria-label="Language / Γλώσσα">
+          <span data-lang="gr">EL</span>
+          <span class="lang-sep">·</span>
+          <span data-lang="en">EN</span>
+        </button>
+        <span class="hero-mode" id="hero-mode" hidden></span>
+      </div>
+    </div>
+    <p class="hero-tagline" id="tagline"></p>
+    <h1 class="hero-title" data-gr="Ο Κατάλογος" data-en="The Catalogue">The Catalogue</h1>
+    <p class="hero-sub" data-gr="Δεκατρείς ετικέτες με χαρακτήρα και καταγωγή — λευκά, ροζέ, ερυθρά, αφρώδη και γλυκά."
+       data-en="Thirteen labels with character and origin — white, rosé, red, sparkling and sweet.">Thirteen labels with character and origin — white, rosé, red, sparkling and sweet.</p>
+  </header>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="search" autocomplete="off" />
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Κατηγορίες"></nav>
+  </div>
+
+  <main id="app"></main>
+
+  <footer class="foot" id="foot"></footer>
+
+  <!-- Bottle zoom + full detail card -->
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="detail-card" id="detail-card"></div>
+  </div>
+
+  <script src="script.js?v=7"></script>
+</body>
+</html>

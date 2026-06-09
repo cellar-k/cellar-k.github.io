@@ -1,0 +1,158 @@
+{
+  "shop": {
+    "name": "Cellar·K",
+    "tagline_gr": "Cantine Colosi · Σαλίνα & Σικελία",
+    "tagline_en": "Cantine Colosi · Salina & Sicily",
+    "instagram_url": "https://instagram.com/cellar.k.selection",
+    "instagram_handle": "@cellar.k.selection",
+    "email": "info@gmail.com",
+    "phone": "+306972845565",
+    "phone_display": "+30 697 284 5565"
+  },
+  "pricing": {
+    "currency": "EUR",
+    "show_wholesale": true,
+    "default_mode": "retail",
+    "note_gr": "Λιανική: τελική τιμή με ΦΠΑ. Χονδρική: καθαρή τιμή ανά φιάλη (χωρίς ΦΠΑ), κατόπιν συνεννόησης.",
+    "note_en": "Retail: final price incl. VAT. Wholesale: net price per bottle (excl. VAT), by arrangement."
+  },
+  "categories": [
+    { "id": "white",     "name_gr": "Λευκά",            "name_en": "White" },
+    { "id": "rose",      "name_gr": "Ροζέ",             "name_en": "Rosé" },
+    { "id": "red",       "name_gr": "Ερυθρά",           "name_en": "Red" },
+    { "id": "sparkling", "name_gr": "Αφρώδη",           "name_en": "Sparkling" },
+    { "id": "sweet",     "name_gr": "Γλυκά & Passito",  "name_en": "Sweet & Passito" }
+  ],
+  "wines": [
+    {
+      "slug": "salina-bianco", "name": "Salina Bianco", "cat": "white",
+      "grape": "Inzolia 50% · Catarratto 50%",
+      "type_gr": "IGP Salina · Λευκό", "type_en": "IGP Salina · White",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Ηφαιστειακό λευκό από τη Σαλίνα. Ώριμα φρούτα, λευκό ροδάκινο και μεσογειακή βλάστηση.",
+      "note_en": "Volcanic white from Salina. Ripe fruit, white peach and Mediterranean scrub.",
+      "abv": "12,5%", "serve_gr": "Σερβ. 8–10°C", "serve_en": "Serve 8–10°C",
+      "price_retail": 16.5, "price_wholesale": 11.95
+    },
+    {
+      "slug": "salina-rosso", "name": "Salina Rosso", "cat": "red",
+      "grape": "Nerello Cappuccio · Nerello Mascalese",
+      "type_gr": "IGP Salina · Ερυθρό", "type_en": "IGP Salina · Red",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Ρουμπινί ερυθρό. Βύσσινο, άγριο κεράσι και μεσογειακά άνθη, με δυνατότητα παλαίωσης.",
+      "note_en": "Ruby red. Sour cherry, wild cherry and Mediterranean blossom, with ageing potential.",
+      "abv": "14%", "serve_gr": "Σερβ. 16–18°C", "serve_en": "Serve 16–18°C",
+      "price_retail": 16.5, "price_wholesale": 11.95
+    },
+    {
+      "slug": "salina-rosato", "name": "Salina Rosato", "cat": "rose",
+      "grape": "Corinto Nero 50% · Nerello Mascalese 50%",
+      "type_gr": "IGP Salina · Ροζέ", "type_en": "IGP Salina · Rosé",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Ροζέ με ορυκτότητα. Άγριο τριαντάφυλλο, ροζ γκρέιπφρουτ και σπάρτο.",
+      "note_en": "Mineral rosé. Wild rose, pink grapefruit and broom flower.",
+      "abv": "13%", "serve_gr": "Σερβ. 10–12°C", "serve_en": "Serve 10–12°C",
+      "price_retail": 16.5, "price_wholesale": 11.95
+    },
+    {
+      "slug": "secca-del-capo", "name": "Secca del Capo", "cat": "white",
+      "grape": "100% Malvasia",
+      "type_gr": "IGP Salina · Λευκό ξηρό", "type_en": "IGP Salina · Dry white",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Ξηρή Malvasia από Capo Faro & Porri. Εξωτικά φρούτα, αχλάδι, εσπεριδοειδή, δεντρολίβανο.",
+      "note_en": "Dry Malvasia from Capo Faro & Porri. Exotic fruit, pear, citrus, rosemary.",
+      "abv": "13,5%", "serve_gr": "Σερβ. 10°C", "serve_en": "Serve 10°C",
+      "price_retail": 18.5, "price_wholesale": 13.6
+    },
+    {
+      "slug": "guardiano-del-faro", "name": "Guardiano del Faro", "cat": "red",
+      "grape": "100% Nerello Mascalese",
+      "type_gr": "IGP Salina · Ερυθρό", "type_en": "IGP Salina · Red",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "«Ο Φύλακας του Φάρου». Δομημένο ερυθρό· κόκκινα φρούτα, βανίλια και μπαχαρικά. Για παλαίωση.",
+      "note_en": "“Guardian of the Lighthouse.” Structured red; red fruit, vanilla and spice. Ages well.",
+      "abv": "14%", "serve_gr": "Σερβ. 16–18°C", "serve_en": "Serve 16–18°C",
+      "price_retail": 28.5, "price_wholesale": 22.7
+    },
+    {
+      "slug": "malvasia-lipari", "name": "Malvasia delle Lipari · Nurah", "cat": "sweet",
+      "grape": "Malvasia 95% · Corinto Nero 5%",
+      "type_gr": "DOC Naturale · Γλυκό", "type_en": "DOC Naturale · Sweet",
+      "sweet_gr": "Γλυκό", "sweet_en": "Sweet",
+      "note_gr": "Γλυκιά Malvasia των Αιολικών. Ώριμο βερίκοκο, μέλι και διακριτική νότα ευκαλύπτου.",
+      "note_en": "Sweet Aeolian Malvasia. Ripe apricot, honey and a touch of eucalyptus.",
+      "abv": "13%", "serve_gr": "Σερβ. 15°C", "serve_en": "Serve 15°C",
+      "price_retail": 25, "price_wholesale": 19
+    },
+    {
+      "slug": "passito", "name": "Passito", "cat": "sweet",
+      "grape": "100% Moscato Bianco",
+      "type_gr": "IGT Terre Siciliane · Γλυκό", "type_en": "IGT Terre Siciliane · Sweet",
+      "sweet_gr": "Γλυκό", "sweet_en": "Sweet",
+      "note_gr": "Γλυκό Moscato. Αποξηραμένα σύκα, χουρμάς και μέλι. Wine for meditation.",
+      "note_en": "Sweet Moscato. Dried figs, dates and honey. A wine for meditation.",
+      "abv": "13%", "serve_gr": "Σερβ. 13°C", "serve_en": "Serve 13°C",
+      "price_retail": 18.5, "price_wholesale": 13.95
+    },
+    {
+      "slug": "mare", "name": "Mar'è", "cat": "white",
+      "grape": "Inzolia 50% · Catarratto 50%",
+      "type_gr": "IGP Terre Siciliane · Λευκό", "type_en": "IGP Terre Siciliane · White",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Φρέσκο σικελικό λευκό. Λευκά άνθη, κίτρινα φρούτα και νότες πράσινου τσαγιού.",
+      "note_en": "Fresh Sicilian white. White flowers, yellow fruit and green-tea notes.",
+      "abv": "12,5%", "serve_gr": "Σερβ. 8–10°C", "serve_en": "Serve 8–10°C",
+      "price_retail": 14.3, "price_wholesale": 9.9
+    },
+    {
+      "slug": "cariddi-rosato", "name": "Cariddi Rosato", "cat": "rose",
+      "grape": "100% Nero d'Avola",
+      "type_gr": "DOC Sicilia · Ροζέ", "type_en": "DOC Sicilia · Rosé",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Λαμπερό ροζέ. Κόκκινα φρούτα, βελούδινη υφή και δροσερή οξύτητα.",
+      "note_en": "Bright rosé. Red fruit, velvety texture and fresh acidity.",
+      "abv": "12,5%", "serve_gr": "Σερβ. 10–12°C", "serve_en": "Serve 10–12°C",
+      "price_retail": 12.2, "price_wholesale": 8.9
+    },
+    {
+      "slug": "giulia-birbante", "name": "Giulia Birbante", "cat": "sparkling",
+      "grape": "100% Grecanico Dorato",
+      "type_gr": "Vino Bianco Frizzante", "type_en": "Sparkling white",
+      "sweet_gr": "Brut", "sweet_en": "Brut",
+      "note_gr": "Αφρώδες, αφιερωμένο από τον Pietro Colosi στην κόρη του. Άνθη πορτοκαλιάς, γιασεμί, αλμύρα.",
+      "note_en": "Sparkling, dedicated by Pietro Colosi to his daughter. Orange blossom, jasmine, salinity.",
+      "abv": "12,5%", "serve_gr": "Σερβ. 8–10°C", "serve_en": "Serve 8–10°C",
+      "price_retail": 15.1, "price_wholesale": 10.8
+    },
+    {
+      "slug": "grillo-acacia", "name": "Grillo Acacia", "cat": "white",
+      "grape": "100% Grillo",
+      "type_gr": "DOC Sicilia · Λευκό", "type_en": "DOC Sicilia · White",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Grillo σε βαρέλι ακακίας. Αρωματικά βότανα, διακριτική βανίλια και φρεσκάδα.",
+      "note_en": "Grillo in acacia barrels. Aromatic herbs, subtle vanilla and freshness.",
+      "abv": "13%", "serve_gr": "Σερβ. 10–12°C", "serve_en": "Serve 10–12°C",
+      "price_retail": 15.2, "price_wholesale": 10.95
+    },
+    {
+      "slug": "viognier", "name": "Viognier", "cat": "white",
+      "grape": "100% Viognier",
+      "type_gr": "IGP Terre Siciliane · Λευκό", "type_en": "IGP Terre Siciliane · White",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Αρωματικό Viognier. Ακακία, λεμονανθός, ροδάκινο και ευχάριστη ορυκτότητα.",
+      "note_en": "Aromatic Viognier. Acacia, lemon blossom, peach and pleasant minerality.",
+      "abv": "13%", "serve_gr": "Σερβ. 8–10°C", "serve_en": "Serve 8–10°C",
+      "price_retail": 14.3, "price_wholesale": 10.1
+    },
+    {
+      "slug": "nero-davola", "name": "Nero d'Avola", "cat": "red",
+      "grape": "100% Nero d'Avola",
+      "type_gr": "DOC Sicilia · Ερυθρό", "type_en": "DOC Sicilia · Red",
+      "sweet_gr": "Ξηρό", "sweet_en": "Dry",
+      "note_gr": "Η ναυαρχίδα της Σικελίας. Βύσσινο, δαμάσκηνο, μαύρο πιπέρι και ελιά. Απαλό, στρογγυλό.",
+      "note_en": "Sicily's flagship grape. Sour cherry, plum, black pepper and olive. Soft and round.",
+      "abv": "14%", "serve_gr": "Σερβ. 16–18°C", "serve_en": "Serve 16–18°C",
+      "price_retail": 13.3, "price_wholesale": 9.4
+    }
+  ]
+}
