@@ -14,7 +14,8 @@
   --muted:      #b3aa9c;
   --muted-dim:  #8d8576;
   --hair:       rgba(191,167,115,.18);
-  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --body:  "Spectral", Georgia, "Times New Roman", serif;
   --sans:  "Inter", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --wrap: 1080px;
   --ease: cubic-bezier(.22,.61,.36,1);
@@ -100,6 +101,7 @@ body {
   color: var(--cream);
 }
 .hero-sub {
+  font-family: var(--body);
   margin: 14px 0 0;
   max-width: 38ch;
   color: var(--muted);
@@ -329,6 +331,7 @@ body {
   text-overflow: ellipsis;
 }
 .card-note {
+  font-family: var(--body);
   font-size: .9rem;
   color: var(--muted);
   line-height: 1.5;
@@ -512,7 +515,7 @@ body {
   margin: 0;
 }
 .detail-grape { color: var(--muted); font-size: .95rem; margin: 0; }
-.detail-note { color: var(--bone); font-size: 1.02rem; line-height: 1.6; margin: 6px 0; }
+.detail-note { font-family: var(--body); color: var(--bone); font-size: 1.02rem; line-height: 1.6; margin: 6px 0; }
 .detail-specs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 2px; }
 .detail-price {
   margin-top: auto;

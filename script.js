@@ -56,6 +56,9 @@
   const fmtPrice = (n) => (n == null ? null : "€" + Number(n).toFixed(2));
   const pickPrice = (w) =>
     (STATE.mode === "wholesale" ? w.price_wholesale : w.price_retail) ?? null;
+  // Wholesale prices are by arrangement and intentionally NOT published in this public file;
+  // in trade mode show "on request" rather than a bare dash.
+  const emptyPriceText = () => (STATE.mode === "wholesale" ? t().askPrice : t().priceTBD);
   const wholesaleOn = () => !!(STATE.data && STATE.data.pricing && STATE.data.pricing.show_wholesale);
 
   const $ = (s) => document.querySelector(s);
@@ -115,8 +118,8 @@
     badge.textContent = pick(w, "sweet");
     const pic = document.createElement("picture");
     pic.innerHTML =
-      `<source srcset="assets/wines/${esc(w.slug)}.avif" type="image/avif">` +
-      `<img src="assets/wines/${esc(w.slug)}.png" alt="${esc(w.name)}" loading="lazy" decoding="async">`;
+      `<source srcset="assets/wines/${esc(w.slug)}.avif?v=2" type="image/avif">` +
+      `<img src="assets/wines/${esc(w.slug)}.png?v=2" alt="${esc(w.name)}" loading="lazy" decoding="async">`;
     photo.append(badge, pic);
 
     // Tap/click the bottle → full-scale zoom
@@ -157,7 +160,7 @@
     if (formatted) {
       amount.textContent = formatted;
     } else {
-      amount.textContent = t().priceTBD;
+      amount.textContent = emptyPriceText();
       amount.classList.add("is-empty");
       amount.title = t().askPrice;
     }
@@ -282,8 +285,8 @@
       `<div class="detail-media">` +
         (badge ? `<span class="card-badge">${esc(badge)}</span>` : "") +
         `<picture>` +
-          `<source srcset="assets/wines/${esc(w.slug)}.avif" type="image/avif">` +
-          `<img class="detail-img" src="assets/wines/${esc(w.slug)}.png" alt="${esc(w.name)}">` +
+          `<source srcset="assets/wines/${esc(w.slug)}.avif?v=2" type="image/avif">` +
+          `<img class="detail-img" src="assets/wines/${esc(w.slug)}.png?v=2" alt="${esc(w.name)}">` +
         `</picture>` +
       `</div>` +
       `<div class="detail-info">` +
@@ -294,7 +297,7 @@
         `<div class="detail-specs">${specs}</div>` +
         `<div class="detail-price">` +
           `<span class="detail-price-tier">${esc(tier)}</span>` +
-          `<span class="detail-price-amount${price ? "" : " is-empty"}">${esc(price || t().priceTBD)}</span>` +
+          `<span class="detail-price-amount${price ? "" : " is-empty"}">${esc(price || emptyPriceText())}</span>` +
         `</div>` +
       `</div>`;
 
