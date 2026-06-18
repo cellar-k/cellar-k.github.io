@@ -1,4 +1,4 @@
-/* Cellar·K — catalogue (kafeneon-style: plain HTML/CSS/JS, no build).
+/* Cellar · K — catalogue (kafeneon-style: plain HTML/CSS/JS, no build).
    Brand palette: ink #141414 · oxblood #4E0000 · gold #BFA773 · bone #E7E7E0 */
 
 :root {
@@ -540,6 +540,26 @@ body {
   color: var(--gold);
 }
 .detail-price-amount.is-empty { color: var(--muted-dim); }
+.detail-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  align-self: flex-start;
+  margin-top: 16px;
+  padding: 12px 22px;
+  font-family: var(--sans);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background .25s var(--ease), transform .25s var(--ease);
+}
+.detail-buy:hover { background: var(--gold-soft); transform: translateY(-1px); }
+.detail-buy:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
 
 @media (max-width: 640px) {
   .detail-card { flex-direction: column; max-height: 90vh; }

@@ -12,6 +12,9 @@
     const p = new URLSearchParams(location.search);
     return TRADE_PARAMS.some((k) => p.has(k));
   };
+  // "Buy online" sends retail shoppers to the website shop (→ Shopify checkout). Absolute
+  // URL so it works from every deployment of this catalogue; update at the cellark.gr launch.
+  const SHOP_URL = "https://romanos2408.github.io/cellark/catalog.html";
   const STATE = {
     lang: (() => { try { return localStorage.getItem(KEY) || "en"; } catch { return "en"; } })(),
     mode: "retail", // resolved in init() from the URL (and the show_wholesale switch)
@@ -32,6 +35,7 @@
       wholesale: "Χονδρική",
       priceTBD: "—",
       askPrice: "Κατόπιν συνεννόησης",
+      buy: "Αγορά online",
     },
     en: {
       searchPlaceholder: "Search wine, grape, region…",
@@ -44,6 +48,7 @@
       wholesale: "Wholesale",
       priceTBD: "—",
       askPrice: "On request",
+      buy: "Buy online",
     },
   };
 
@@ -299,6 +304,9 @@
           `<span class="detail-price-tier">${esc(tier)}</span>` +
           `<span class="detail-price-amount${price ? "" : " is-empty"}">${esc(price || emptyPriceText())}</span>` +
         `</div>` +
+        (STATE.mode !== "wholesale"
+          ? `<a class="detail-buy" href="${SHOP_URL}#${esc(w.slug)}">${esc(t().buy)} <span aria-hidden="true">→</span></a>`
+          : "") +
       `</div>`;
 
     lb.setAttribute("aria-label", w.name);
