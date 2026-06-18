@@ -251,6 +251,16 @@
     host.hidden = false;
   }
 
+  /* ---------- Buy-now CTA (header) — retail only ---------- */
+  function renderBuyNow() {
+    const b = $("#buyNow");
+    if (!b) return;
+    // Wholesale orders are by arrangement, not via the retail shop — hide it there.
+    const show = STATE.mode !== "wholesale";
+    b.hidden = !show;
+    if (show) b.href = SHOP_URL;
+  }
+
   /* ---------- Language toggle ---------- */
   function setLang(lang) {
     STATE.lang = lang;
@@ -304,9 +314,6 @@
           `<span class="detail-price-tier">${esc(tier)}</span>` +
           `<span class="detail-price-amount${price ? "" : " is-empty"}">${esc(price || emptyPriceText())}</span>` +
         `</div>` +
-        (STATE.mode !== "wholesale"
-          ? `<a class="detail-buy" href="${SHOP_URL}#${esc(w.slug)}">${esc(t().buy)} <span aria-hidden="true">→</span></a>`
-          : "") +
       `</div>`;
 
     lb.setAttribute("aria-label", w.name);
@@ -347,6 +354,7 @@
     STATE.mode = (wholesaleOn() && urlWantsTrade()) ? "wholesale" : "retail";
     applyStatic();
     renderModeBadge();
+    renderBuyNow();
     buildTabs();
     renderGrid();
     renderFooter();

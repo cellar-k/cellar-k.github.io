@@ -540,26 +540,27 @@ body {
   color: var(--gold);
 }
 .detail-price-amount.is-empty { color: var(--muted-dim); }
-.detail-buy {
+/* Single "Buy now" CTA in the header (right column, under the EL/EN toggle) */
+.buy-now {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  align-self: flex-start;
-  margin-top: 16px;
-  padding: 12px 22px;
+  margin-top: 8px;
+  padding: 9px 18px;
   font-family: var(--sans);
-  font-size: .8rem;
-  font-weight: 600;
-  letter-spacing: .12em;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .1em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--ink);
   background: var(--gold);
-  border-radius: 2px;
+  border-radius: 999px;
   text-decoration: none;
-  transition: background .25s var(--ease), transform .25s var(--ease);
+  transition: background .2s var(--ease), transform .2s var(--ease);
 }
-.detail-buy:hover { background: var(--gold-soft); transform: translateY(-1px); }
-.detail-buy:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
+.buy-now[hidden] { display: none; }
+.buy-now:hover { background: var(--gold-soft); transform: translateY(-1px); }
+.buy-now:focus-visible { outline: 2px solid var(--gold-soft); outline-offset: 3px; }
 
 @media (max-width: 640px) {
   .detail-card { flex-direction: column; max-height: 90vh; }
