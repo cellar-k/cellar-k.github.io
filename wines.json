@@ -18,6 +18,11 @@
   },
   "categories": [
     {
+      "id": "red",
+      "name_gr": "Ερυθρά",
+      "name_en": "Red"
+    },
+    {
       "id": "white",
       "name_gr": "Λευκά",
       "name_en": "White"
@@ -28,19 +33,14 @@
       "name_en": "Rosé"
     },
     {
-      "id": "red",
-      "name_gr": "Ερυθρά",
-      "name_en": "Red"
+      "id": "sweet",
+      "name_gr": "Γλυκά & Passito",
+      "name_en": "Sweet & Passito"
     },
     {
       "id": "sparkling",
       "name_gr": "Αφρώδη",
       "name_en": "Sparkling"
-    },
-    {
-      "id": "sweet",
-      "name_gr": "Γλυκά & Passito",
-      "name_en": "Sweet & Passito"
     }
   ],
   "wines": [
